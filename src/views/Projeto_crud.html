@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/publico/css/Projeto_crud.css" rel="stylesheet">
+    <link rel="stylesheet" href="/bscss/bootstrap.min.css">
+    <title>Fomulário</title>
+</head>
+<body>
+    <!-- nome, data-nascimento, cpf, e-mail, telefone, estado civil (solteira/o, casada/o, divorciada/o, viúva/o), curso -->
+    <main>     
+    <form id="dataForm" name="dataForm" class="row g-3" action="/album-digital" method="POST" onsubmit="return validar()">
+      <img src="/publico/imagens/checklist.png" class="img-thumbnail" alt="Formulário" id="imagemform">
+        <div class="form-group">
+            <label for="examplename1">Nome</label>
+            <input type="text" class="form-control cor" id="exampleInputNome1" placeholder="Insira o Nome" maxlength="50" name="exampleInputNome1">
+          </div>
+        <div class="form-group">
+          <label for="examplecurso1">Data Nascimento</label>
+          <input type="date" class="form-control cor" id="exampleInputData1" placeholder="data-nascimento" name="exampleInputData1">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control cor" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insira o Email" name="exampleInputEmail1">
+          <small id="emailHelp" class="cor"><b>Nunca compartilharemos seu e-mail com mais ninguém.</b></small>
+        </div>
+        <div class="form-group">
+            <label for="examplecpf1">CPF</label>
+            <input type="text" class="form-control cor" id="exampleInputCpf1" placeholder="Insira o CPF" name="exampleInputCpf1">
+          </div>
+          <div class="form-group">
+            <label for="exampletelefone1">Telefone</label>
+            <input type="text" class="form-control cor" id="exampleInputTelefone1" placeholder="(XX) XXXXX-XXXX" name="exampleInputTelefone1">
+          </div>
+          <div class="form-group">
+            <label for="disabledSelect" class="form-label">Estado Cívil</label>
+            <select id="disabledSelect" class="form-select">
+              <option>Solteiro(a)</option>
+              <option>Casado(a)</option>
+              <option>Divorciado(a)</option>
+              <option>Viúvo(a)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="examplecurso1">Insira seu Curso</label>
+            <input type="text" class="form-control cor" id="exampleInputCurso1" placeholder="Insira seu Curso" name="exampleInputCurso1">
+          </div>
+          <br>
+          <p>fique tranquilo, caso algo der errado eu vou avisar ;)</p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+          <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <img src="/publico/imagens/Alerta.png" class="rounded me-2" alt="Alerta!" style="width: 20px;">
+              <strong class="me-auto">Hummm.. Aconteceu algo!</strong>
+              <small></small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        <div id="msgToast" class="toast-body div-toast">
+          
+        </div>
+      </form>
+
+      <script src="/jquery/jquery.slim.min.js"></script>
+    <script src="/popperjs/popper.min.js"></script>
+    <script src="/bsjs/bootstrap.min.js"></script>
+    <script src="/mask/jquery.mask.js"></script>
+    <script src="/publico/js/JaspionSarado.js"></script>
+    </main>
+</body>
+</html>
